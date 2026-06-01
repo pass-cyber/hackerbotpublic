@@ -125,8 +125,8 @@ baileys-bot/
 ## 1. Cloner le projet
 
 ```bash
-git clone https://github.com/ton-repo/bot.git
-cd bot
+git clone https://github.com/cpkakaping-arch/hackerbotpublic.git
+cd hacker_bot
 ```
 
 ---
@@ -158,16 +158,45 @@ node index.js
 # ⚙️ Configuration (`config.js`)
 
 ```js
+require("dotenv").config();
+
+if (!process.env.GEMINI_API_KEY) 
+    {
+        console.warn("⚠ GEMINI_API_KEY non exportée");
+    }
+
 module.exports = {
+
     prefix: "@",
-    aiPrefix: "ai",
 
     botName: "Open Formation Bot",
+
     creator: "Hacker Génie",
-    org: "Open Formation Area",
+
+    org: "Area Reform (Open Formation)",
+
+    debug: true,
 
     geminiApiKey: process.env.GEMINI_API_KEY,
-    geminiModel: "gemini-2.5-flash"
+
+    geminiModel: "gemini-2.5-flash",
+
+    version: "1.0.0",
+
+        
+    paths: 
+    {
+
+        commands: "./commands",
+
+        adminCommands: "./admin_commands",
+
+        database: "./database",
+
+        planif: "./database/dbcommands/planif/planif.json",
+
+
+    },
 };
 ```
 
@@ -264,7 +293,7 @@ ping: {
 
 * Baileys (WhatsApp Web API)
 * Node.js v24+
-* Gemini AI (@google/generative-ai)
+* Gemini AI (@google/generative-ai et @google/genai)
 * système de modules dynamique
 * event-driven architecture
 
@@ -313,7 +342,7 @@ ping: {
 
 * **Nom** : Hacker Génie
 * **Projet** : Hacker Bot
-* **Organisation** : Open Formation Area Reform
+* **Organisation** : Area Reform (Open Formation)
 
 ---
 
@@ -337,11 +366,3 @@ Ce bot est conçu comme une base solide pour devenir :
 👉 une plateforme évolutive multi-modules
 
 ---
-
-Si tu veux 👍
-
-Je peux maintenant te faire :
-
-🔥 README version GitHub stylé avec badges
-🔥 ou architecture finale type “Meta AI bot pro”
-🔥 ou système cmd_infos automatique (plus besoin de modifier help)
