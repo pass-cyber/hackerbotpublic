@@ -167,8 +167,8 @@ hacker_bot/
 ## 1. Cloner le projet
 
 ```bash
-git clone https://github.com/cpkakaping-arch/hackerbotpublic.git
-cd hackerbotpublic
+git clone https://github.com/cpkakaping-arch/hacker_bot.git
+cd hacker_bot
 ```
 
 ---
@@ -388,3 +388,12 @@ ping: {
 
 ---
 
+# ⭐ Objectif du projet
+
+Créer un **bot WhatsApp intelligent complet**, capable de :
+
+* répondre comme une IA moderne
+* gérer des groupes automatiquement
+* évoluer comme une plateforme (Meta AI-like)
+* rester modulaire et scalable
+---
